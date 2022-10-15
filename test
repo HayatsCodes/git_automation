@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Automates basic git proccesses
+
+commit() {
+	x=""
+	for i in "$@"
+	do
+		(( x+=i ))
+	done
+}
+
+commit "$@"
+
+git add .
+git commit -m "$x"
+git push
+
