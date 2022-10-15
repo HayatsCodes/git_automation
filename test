@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
 # Automates basic git proccesses
 
-commit() {
-	x=""
-	for i in "$@"
-	do
-		(( x+=i ))
-	done
-}
-echo $x
-
-commit "$@"
+x="$@"
 
 git add .
 git commit -m "$x"
